@@ -1,0 +1,32 @@
+{
+  "name": "guardJS",
+  "author": "kobexie",
+  "version": "1.0.0",
+  "description": "前端稳定性系统",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "node devServer.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "~6.5.2",
+    "babel-core": "~6.14.0",
+    "babel-eslint": "~6.1.2",
+    "babel-loader": "~6.2.5",
+    "babel-plugin-import": "^1.6.2",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "~6.6.5",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "~6.14.0",
+    "babel-preset-es2015-loose": "~7.0.0",
+    "express": "~4.13.4",
+    "extract-text-webpack-plugin": "~1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-dest": "^0.2.0",
+    "gulp-webpack": "^1.5.0",
+    "webpack": "~1.13.2",
+    "webpack-dev-middleware": "~1.5.1",
+    "webpack-hot-middleware": "~2.10.0"
+  }
+}

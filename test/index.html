@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <script src="bundle.js"></script>
+    <body>
+        test
+        <script>
+            function a() {
+                b();
+            }
+            var fn = function() {
+                return new Promise((resolve, reject)=> {
+                    if(Math.random() > 0.3) {
+                        resolve('yes');
+                    } else {
+                        reject('no');
+                    }
+                });
+            }
+            fn().then((res)=> {
+                console.log('resolve', res);
+                c();
+            })
+            // a();
+            // GuardJS.guard(function() {
+            //     new Image().src = 'xxx'
+            //     var x;
+            //     x.indexOf(1)
+            // })();
+            
+            // let fn = ()=> {
+            //     f();
+            // }
+            // fn._guardJS = true;
+            // setTimeout(fn, 1000);
+            // var a = new XMLHttpRequest();
+            // a.open('get', 'www.baidu.com/test');
+            // a.send()
+        </script>
+        <script>
+            fetch('add.wasm').then(response => response.arrayBuffer()).then(bytes => WebAssembly.compile(bytes)).then(module => {
+                const instance = new WebAssembly.Instance(module);
+                console.log('--xxx-', instance.exports.int_sqrt(4));
+            });
+        </script>
+    </body>
+</html>
